@@ -16,6 +16,22 @@ const camas = new Producto(6, "camas", 5000)
 
 const productos = [alimento, comedero, snacks, pipetas, piedras, camas]
 
+let divProductos = document.getElementById("divProductos")
+
+productos.forEach(productoEnArray => {
+    divProductos.innerHTML += ` 
+   
+ <div class="card ProductosArray" id="producto${productoEnArray.id}" style="width: 18rem;">
+      <div class="card-body">
+          <h5 class="card-title">Alimento</h5>
+          <p> Nombre: ${productoEnArray.nombre}  <p/>
+          <p> Precio:$ ${productoEnArray.precio}  <p/>
+      </div>
+ </div>
+    `
+})
+
+/*
 
 const carrito = [];
 
@@ -74,6 +90,8 @@ const llevarProducto = () => {
 saludar();
 productoElegido = consultarProductos();
 llevarProducto();
+
+*/
 
 
 
