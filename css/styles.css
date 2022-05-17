@@ -60,6 +60,7 @@ header {
 
 }
 
+
 #cart-icon {
     font-size: 1.8rem;
     cursor: pointer;
@@ -69,7 +70,7 @@ header {
 .cart {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -200%;
     width: 360px;
     min-height: 100vh;
     padding: 20px;
@@ -234,5 +235,10 @@ header {
     background: hsl(249, 32%, 17%);
 }
 
+.newsletter .container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
 
 
