@@ -171,3 +171,22 @@ function addProductToCart(title, price, productImg) {
         
 
     }) }
+
+  //FETCH
+
+   
+  fetch('productos.json')
+    .then(response => response.json())
+    .then(productos => {
+         productos.forEach((productos) => {
+               let {nombre, marca, precio, stock} = productos
+               divProduct-box.innerHTML += `
+                  <div Nombre="nombre${nombre}">
+                  <h2>Marca: ${marca}</h2>
+                  <p>Stock: ${stock} </p>
+                  <p>Precio: ${precio} </p>
+                  </div>
+               `
+        })
+
+    })
