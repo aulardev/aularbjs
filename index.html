@@ -5,19 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Ecommerce web - Shopping Cart </title>
+  <title> Ecommerce web - </title>
   <link rel="stylesheet" href="css/styles.css">
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
-  <div id="divProductos"></div>
-  <div id="divBuscados" class="row"></div>
-
+  
   <header>
     <div class="nav container">
-      <a href="#" class="logo">Aularb Tech E-commerce </a>
-      <i class='bx bx-shopping-bag' id="cart-icon"></i>
+      <a href="#" class="logo"> abc technology < .</a>
+      <i class='bx bx-cart' id="cart-icon"></i>
       <div class="cart">
         <h2 class="cart-title">Tu Carrito</h2>
 
@@ -34,11 +32,17 @@
       </div>
 
     </div>
-
-
   </header>
 
+ </section>
+
   <section class="shop container">
+
+    <h2 class="section tittle">Más vendidos</h2>
+    <div id="divProductos"></div>
+    
+    <div id="divBuscados" class="sale-content"></div>
+
     <h2 class="section title">Productos en tienda</h2>
     
     <div class="shop-content">
@@ -46,7 +50,7 @@
       <div class="product-box">
         <img src="/img/img1.jpg" alt="" class="product-img">
         <h2 class="product-title"> Auricular Beat </h2>
-        <span class="price">$5700</span>
+        <span class="price">$4700</span>
         <i class='bx bx-shopping-bag add-cart'></i>
       </div>
 
@@ -67,14 +71,14 @@
       <div class="product-box">
         <img src="/img/img4.jpg" alt="" class="product-img">
         <h2 class="product-title"> Auricular Sony </h2>
-        <span class="price">$6800</span>
+        <span class="price">$5800</span>
         <i class='bx bx-shopping-bag add-cart'></i>
       </div>
 
       <div class="product-box">
         <img src="/img/img5.jpg" alt="" class="product-img">
         <h2 class="product-title"> Case gamer </h2>
-        <span class="price">$3600</span>
+        <span class="price">$7600</span>
         <i class='bx bx-shopping-bag add-cart'></i>
       </div>
 
@@ -107,11 +111,11 @@
     <form id="formulario">
 
       <div id="registros">
-        <h3 class="newsletter-title">Registrate ahora</h3>
+        <h2 class="newsletter-title">Registrate ahora</h2>
         <br>
 
         <p class="newsletter-desc">
-          Recibe de <b>E Tech Shop</b> nuestras ultimas promociones en todos nuestros productos
+          Recibe de <b>abc technology Shop</b> nuestras ultimas promociones en todos nuestros productos
         </p>
 
       </div>
@@ -132,18 +136,34 @@
   <br>
 
   <footer class="footer">
-    <div class="container footer__grid">
+    <div class="footer__container container">
 
-        <p class="container footer__text"> Web designed for César Aular Belizario | 2022 | Copyright |
-            Email contact: cesar.aularb@gmail.com | Teléfono: 11 6115 5315 </p>
+        <div class="footer__contact">
+            <div class="footer__texts">
+                <h2 class="title">¿Tuviste algún problema con nuestros productos?</h2>
+                <p class="footer__copy">Si tenés alguna duda respecto a tu compra no dudes en contactarnos</p>
 
+                <div class="footer__social">
+                    <a href="#">
+                       <img src="/img/bxl-facebook-circle.svg" alt="" class="footer__icon">
+                    </a>
+                    <a href="#">
+                        <img src="/img/bxl-instagram.svg" alt="" class="footer__icon">
+                     </a>
+                     <a href="#">
+                        <img src="/img/bxl-linkedin-square.svg" alt="" class="footer__icon">
+                     </a>
+                </div>
+            </div>
 
-        <section class="footer__contact">
+            <figure class="footer__picture">
+                <img src="/img/Full Inbox _Isometric.svg" class="footer__img" alt="">
+            </figure>
+        </div>
 
-            <h3 class="footer__title"> Contactanos </h3>
-
-          
-        </section>
+        <p class="footer__copyrigth">
+            Sitio web creado por &copy; Aular Belizario Developers  | Contacto +58 11 6116 4664 | aularbtech@gmail.com
+        </p>
     </div>
 
 </footer>

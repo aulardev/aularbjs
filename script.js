@@ -51,7 +51,10 @@ function ready() {
 // funcion boton de compra
 function buyButtonClicked(){
     Swal.fire('Tu orden ha sido tomada')
-
+    let cartContent = document.getElementsByClassName('cart-content')[0]
+    while (cartContent.hasChildNodes()) {
+        cartContent.removeChild(cartContent.firstChild);
+    }
 }
 
 // cantidades cambios
@@ -94,10 +97,11 @@ function updatetotal(){
         let quantityElement = cartBox.getElementsByClassName('cart-quantity')[0]
         let price = parseFloat(priceElement.innerText.replace("$", ""));
         let quantity = quantityElement.value;
-        total = total + (price * quantity);
-
-        document.getElementsByClassName('total-price')[0].innerText = "$" + total;
+        total = total + price * quantity;
     }
+        
+    document.getElementsByClassName('total-price')[0].innerText = "$" + total;
+    
 }
 
 
@@ -148,7 +152,7 @@ function addProductToCart(title, price, productImg) {
 
     let nombre = []
     let email = []
-
+    
 
 
     let formularioId = document.querySelector('#formulario')
@@ -179,11 +183,11 @@ function addProductToCart(title, price, productImg) {
     .then(response => response.json())
     .then(buscados => {
          buscados.forEach((buscado) => {
-               let {id,nombre, marca, precio, stock} = buscado
+               let {id, nombre, descripcion, precio, stock} = buscado
                divBuscados.innerHTML += `
                   <div id="buscados${id}"
-                  <h1>Nombre: ${nombre}</h1>
-                  <h2>Marca: ${marca}</h2>
+                  <h2>Descripción: ${descripcion}</h2>
+                  <h3> ${nombre}</h3>
                   <p>Stock: ${stock} </p>
                   <p>Precio: ${precio} </p>
                   </div>
